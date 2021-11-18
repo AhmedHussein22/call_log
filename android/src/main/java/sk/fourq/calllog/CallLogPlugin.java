@@ -57,7 +57,7 @@ public class CallLogPlugin implements FlutterPlugin, ActivityAware, MethodCallHa
             CallLog.Calls.PHONE_ACCOUNT_ID
     };
 
-    private MethodCall request=null;
+    private MethodCall request;
     private Result result;
     private ActivityPluginBinding activityPluginBinding;
     private Activity activity;
@@ -120,9 +120,9 @@ public class CallLogPlugin implements FlutterPlugin, ActivityAware, MethodCallHa
     @Override
     public void onMethodCall(MethodCall c, Result r) {
         Log.d(TAG, "onMethodCall");
-        if (request != null) {
-            r.error(ALREADY_RUNNING, "Method call was cancelled. One method call is already running", null);
-        }
+      //  if (request != null) {
+       //     r.error(ALREADY_RUNNING, "Method call was cancelled. One method call is already running", null);
+      //  }
 
         request = c;
         result = r;
