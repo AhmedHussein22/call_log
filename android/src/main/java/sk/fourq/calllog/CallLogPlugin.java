@@ -57,7 +57,7 @@ public class CallLogPlugin implements FlutterPlugin, ActivityAware, MethodCallHa
             CallLog.Calls.PHONE_ACCOUNT_ID
     };
 
-    private MethodCall request;
+    private MethodCall request=null;
     private Result result;
     private ActivityPluginBinding activityPluginBinding;
     private Activity activity;
